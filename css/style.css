@@ -302,7 +302,8 @@ body {
     padding: 0px;
 }
 
-.footer-offers-item a{
+.footer-offers-item a,
+.footer-feedback a{    
     color: var(--golden-text);
 }
 
