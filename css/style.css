@@ -11,6 +11,7 @@
     --basic-gray: #3D546F;
     --basic-green: #63A63E;
     --basic-beige: #F9F5F0;
+    --sorting-background: #F7F3EC;
     --basic-black: #000000;
     --success: #5FBB2D;
     --error: #BA2732;
@@ -106,6 +107,7 @@ body {
 
 .main-navigation {
     background-color: var(--basic-gray);
+    text-transform: none;
 }
 
 .main-navigation a:hover {
@@ -189,6 +191,7 @@ body {
 
 .products-item {
     background-color: var(--white);
+    text-align: center;
 }
 
 .products-item h3{
@@ -197,6 +200,7 @@ body {
     font-size: 18px;
     line-height: 20px;
     font-weight: 700;
+    text-transform: none;
 }
 
 .old-price {
@@ -205,6 +209,7 @@ body {
 
 .new-price {
     background-image: url("../img/new_price.png");
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -357,4 +362,87 @@ body {
 
 .footer-feedback a:focus {
     color: var(--basic-red);
+}
+
+/* Стили страницы каталога */
+.user-menu h2 {
+    background-color: var(--white);
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+
+.user-menu a {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--black-text);
+}
+
+.catalog {
+    color: var(--basic-black);
+}
+
+.breadcrumbs {
+    list-style: none;
+}
+.breadcrumbs a {
+    font-size: 13px;
+    line-height: 18px;
+    /* color: var(--basic-black); */
+}
+
+.catalog h1 {
+    background-color: var(--basic-background);
+    color: var(--black-text);
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Cuprum", Arial, sans-serif;
+}
+
+.filter,
+.sorting {
+    background-color: var(--sorting-background);
+    font-size: 13px;
+    line-height: 18px;
+    /* color: var(--basic-black); */
+}
+
+.legend-name {
+    background-color: var(--sorting-background);
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.filter li,
+.sorting li {
+    list-style: none;
+}
+
+.price label {
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.catalog-manufacturers label
+.supply label{
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.catalog-button {
+    background-color: var(--white);
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item a {
+    color: var(--basic-black);
 }
