@@ -292,6 +292,7 @@ body {
     font-size: 18px;
     font-family: "Cuprum", Arial, sans-serif;
     line-height: 24px;
+    
 }
 
 .footer-address {
@@ -314,9 +315,26 @@ body {
     padding: 0px;
 }
 
+.footer-contacts p,
+.footer-contacts a {
+    color: var(--basic-background);
+}
+
 .footer-offers-item a,
 .footer-feedback a{    
     color: var(--golden-text);
+}
+
+
+.footer-navigation-item a:hover,
+.footer-offers-item a:hover,
+.footer-feedback a:hover {
+    text-decoration: underline;
+}
+
+.footer-navigation-item a:focus,
+.footer-offers-item a:focus {
+    opacity: 50%;
 }
 
 .footer-social {
@@ -335,4 +353,8 @@ body {
     background: linear-gradient(0deg, #212A3A, #212A3A);
     /* border: var(--basic-black) solid 1px ;
     border-radius: 50%; */
+}
+
+.footer-feedback a:focus {
+    color: var(--basic-red);
 }
