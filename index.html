@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> <!-- Подключили шрифт Cuprum -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!-- Подключили шрифт PT Sans -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
   </head>
   <body class="page-body">
-    <header calss="main-header">
-      <section>
-        <a class="main-header-logo">Техномарт</a>
-        <!-- <a class="main-header-logo"><img src="img/logo-main.svg" width="107" height= alt="Логотип компании Техномарт"></a> -->
+    <header class="main-header">
+      <section class="user-panel">
+        <!-- <a class="main-header-logo">Техномарт</a> -->
+        <a class="main-header-logo" href="#"><img src="img/logo-main.svg" width="107" height= alt="Логотип компании Техномарт"></a>
         <form class="user-navigation">
           <input type="search" placeholder="Поиск:">
         </form>
-        <a href="#">Закладки </a>
-        <a href="#">Корзина</a>
-        <button type="button">Оформить заказ</button>
+        <a class="user-interface" href="#">Закладки: </a>
+        <a class="user-interface" href="#">Корзина: </a>
+        <button class="button place-order" type="button">Оформить заказ</button>
       </section>
-      <section main-header-contacts>
+      <section class="main-header-contacts">
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <address class="main-address">
           <a href=tel:+78005558628>+7 800 555-86-28</a>
@@ -28,30 +32,30 @@
         </address>
         <a href="blank.html">Войти</a>
         <a href="blank.html">Регистрация</a>
+        <nav class="main-navigation">
+          <a href="#">Главная</a>
+          <a href="blank.html">Компания</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="blank.html">Новости</a>
+          <a href="blank.html">Спецпредложения</a>
+          <a href="blank.html">Доставка</a>
+          <a href="blank.html">Контакты</a>
+        </nav>
       </section>
-      <nav class="main-navigation">
-        <a href="#">Главная</a>
-        <a href="blank.html">Компания</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="blank.html">Новости</a>
-        <a href="blank.html">Спецпредложения</a>
-        <a href="blank.html">Доставка</a>
-        <a href="blank.html">Контакты</a>
-      </nav>
     </header>
     <main>
-      <h1>Интернет-магазин "Техномарт"</h1>
+      <h1 class="site-name">Интернет-магазин "Техномарт"</h1>
       <section calss="main-offers">
         <ul class="offers-list">
-          <li class="offers-item">
+          <li class="offers-item materials">
             <h3>Материалы</h3>
             <button class="button button-offers" type="button">На любой вкус</button>
           </li>
-          <li class="offers-item">
+          <li class="offers-item tools">
             <h3>Инструмент</h3>
             <button class="button button-offers" type="button">На все случаи</button>
           </li>
-          <li class="offers-item">
+          <li class="offers-item technic">
             <h3>Техника</h3>
             <button class="button button-offers" type="button">Для стройки</button>
           </li>
@@ -63,19 +67,21 @@
             <button class="slider-button-forward"type="button">Вперед</button>
             <a class="button button-chapter" href="blank.html">Открыть каталог</a>
           </li>
-          <li class="offers-item">
+          <li class="offers-item discounts">
             <h3>Скидки 50%</h3>
             <button class="button button-offers" type="button">На 350 товаров</button>
           </li>
-          <li class="offers-item">
+          <li class="offers-item delivery">
             <h3>Доставка</h3>
             <button class="button button-offers" type="button">Бесплатно</button>
           </li>
         </ul>
       </section>
-      <section class="main-products">
-        <h2>Популярные товары:</h2>
-        <a class="button button-chapter" href="blank.html">Все популярные товары</a>
+      <section>
+        <article class="main-products">
+          <h2>Популярные товары:</h2>
+          <a class="button button-chapter" href="blank.html">Все популярные товары</a>
+        </article>
         <ul class="main-products-list">
           <li class="products-item">
             <article>
@@ -90,7 +96,9 @@
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <img src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="BFG 3000">
               <p class="old-price"><s>22500 Р.</s></p>
-              <p class="new-price">15500 Р.<p>
+              <!-- <figure class="new-price-arrow"> -->
+                <p class="new-price">15500 Р.<p>
+              <!-- </figure> -->
             </article>
           </li>
           <li class="products-item">
@@ -111,35 +119,37 @@
           </li>
         </ul>
       </section>
-      <section  class="main-manufacturers">
-        <h2>Популярные производители:</h2>
-        <a class="button button-chapter" href="blank.html">Все производители</a>
-          <ul class="manufacturers-list">
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-bosch.png" width="126" height="37" alt="Bosch"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-makita.png" width="123" height="40" alt="Makita"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-dewalt.png" width="146" height="44" alt="DeWolt"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-interskol.png" width="200" height="75" alt="Interskol"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-hitachi.png" width="169" height="31" alt="Hitachi"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-lg.png" width="121" height="73" alt="LG"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-aeg.png" width="151" height="98" alt="AEG"></a>
-            </li>
-            <li class="manufacturers-item">
-              <a href="blank.html"><img src="img/logo-metabo.png" width="206" height="73" alt="Metabo"></a>
-            </li>
-          </ul>
+      <section> 
+        <article class="main-manufacturers">
+          <h2>Популярные производители:</h2>
+          <a class="button button-chapter" href="blank.html">Все производители</a>
+        </article>
+        <ul class="manufacturers-list">
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-bosch.png" width="126" height="37" alt="Bosch"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-makita.png" width="123" height="40" alt="Makita"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-dewalt.png" width="146" height="44" alt="DeWolt"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-interskol.png" width="200" height="75" alt="Interskol"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-hitachi.png" width="169" height="31" alt="Hitachi"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-lg.png" width="121" height="73" alt="LG"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-aeg.png" width="151" height="98" alt="AEG"></a>
+          </li>
+          <li class="manufacturers-item">
+            <a href="blank.html"><img src="img/logo-metabo.png" width="206" height="73" alt="Metabo"></a>
+          </li>
+        </ul>
       </section>
       <section class="main-services">
         <h2>Сервисы</h2>
@@ -147,7 +157,7 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="services-list">
           <li class="services-item">
-            <button class="button services-button" type="button">Доставка</button>
+            <button class="button services-button current-services-button" type="button">Доставка</button>
           </li>
           <li class="services-item">
             <button class="button services-button" type="button">Гарантия</button>
@@ -189,7 +199,8 @@
     <footer>
       <section class="footer-contacts">
         <h2>Контактные данные</h2>
-        <a class="footer-logo">Техномарт</a>
+        <a class="footer-logo" href="#"><img src="img/footer-logo.png" width="138" height="23" alt="Логотип компании Техномарт"></a>
+        <!-- <a class="footer-logo">Техномарт</a> -->
         <ul class="footer-navigation-list">
           <li class="footer-navigation-item"><a href="blank.html">Компания</a></li>
           <li class="footer-navigation-item"><a href="blank.html"></a>Новости</li>
@@ -212,7 +223,7 @@
         <h2>Соцсети и почта</h2>
         <p>&copy; 2010-2021 Компания &#171Техномарт&#187 <br>
         Все права защищены</p>
-        <ul>
+        <ul class="social-list">
           <li>
             <a class="social-button" href="#">
               <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,14 +239,14 @@
               0.659976 4.562 0.659976L0.848 0.683976C0.848 0.683976 0.29 0.699976 0.0850002 0.945976C-0.0969998 1.16398 0.0700002 
               1.61398 0.0700002 1.61398C0.0700002 1.61398 2.979 8.49498 6.273 11.961C9.293 15.143 12.725 14.932 12.725 
               14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929 15.203 13.929C15.203 13.929 
-              15.172 11.82 16.138 11.51Z" fill="black"/>
+              15.172 11.82 16.138 11.51Z" fill="white"/>
               </svg>
             </a>
           </li>
           <li>
             <a class="social-button" href="#">
               <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="black"/>
+                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
                 </svg>
             </a>
           </li>
@@ -246,7 +257,7 @@
                 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 
                 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 
                 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 
-                9H18V18H3ZM14 7H18V3H14V7Z" fill="black"/>
+                9H18V18H3ZM14 7H18V3H14V7Z" fill="white"/>
               </svg>  
             </a>
           </li>
