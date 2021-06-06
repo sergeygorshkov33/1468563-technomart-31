@@ -118,6 +118,23 @@ body {
     background-color: var(--dark-gray);
     opacity: 50%;
 }
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(4 60px);
+    gap: 20px;
+}
+
+.main-offers {
+    grid-column: 1/5;
+    grid-row: 1;
+}
+
+.offers-list {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap: 20px;
+    width: 940px;
+}
 
 .site-name {
     display: none;
@@ -140,16 +157,32 @@ body {
     list-style: none;
 }
 
+.offers-item {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: none;
+}
+
 .materials {
+    grid-column: 1;
     background-color: var(--special-yellow);
 }
 
 .tools {
+    grid-column: 2/3;
     background-color: var(--special-blue);
 }
 
 .technic {
+    grid-column: 3/4;
     background-color: var(--special-magenta);
+}
+
+.offers-item-slider {
+    grid-column: 1/3;
+    grid-row: 2/4;
 }
 
 .discounts {
