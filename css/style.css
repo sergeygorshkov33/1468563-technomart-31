@@ -41,13 +41,34 @@ body {
     color: var(--white);
 }
 
+.container {
+    width: 940px;
+    margin: 0 auto;
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+}
 /* Header */
 .user-panel {
     background-color: var(--dark-blue);
     text-transform: none;
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+}
+
+/* .main-header {
+    display: grid;
+    grid-template-rows: 42px, 1fr, 60px, 60px;
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+} */
+
+.user-bar {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 130px 1fr 150px 150px 150px;
+    height: 42px;
+    outline: 5px solid rgba(0, 255, 255, 0.3);
 }
 
 .main-header-logo {
+    grid-column: 1;
     background-color: var(--basic-red);
 }
 
@@ -56,12 +77,27 @@ body {
 }
 
 .user-navigation {
+    /* grid-column: 2/3; */
     background-color: var(--dark-blue);
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+}
+
+.bookmark {
+    grid-column: 3;
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+}
+
+.cart {
+    grid-column: 4;
+    outline: 5px solid rgba(219, 241, 18, 0.3);
 }
 
 .place-order {
+    grid-column: 5;
     color: var(--white);
     background-color: var(--basic-green);
+
+    outline: 5px solid rgba(28, 148, 92, 0.3);
 }
 
 .place-order:hover {
@@ -77,6 +113,33 @@ body {
 .main-header-contacts {
     background-color: var(--basic-graylight);
     text-transform: none;
+    outline: 5px solid rgba(173, 29, 41, 0.3);
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 340px auto 150px;
+    
+    /* grid-template-rows: 158px 60px; */
+}
+
+.main-description {
+    grid-column: 1/2;
+    text-align: left;
+ 
+}
+
+.main-address {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.enter {
+    grid-column: 3/4;
+}
+
+.registration {
+    grid-column: 4/5;
 }
 
 .main-header-contacts a {
@@ -84,6 +147,7 @@ body {
 }
 
 .main-header-contacts p {
+    grid-row: 2;
     color: var(--basic-red);
     font-style: italic;
     font-size: 16px;
@@ -106,8 +170,17 @@ body {
 }
 
 .main-navigation {
-    background-color: var(--basic-gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: var(--black-text);
     text-transform: none;
+    outline: 5px solid rgba(78, 20, 117, 0.3);
+}
+
+.main-navigation a {
+    padding: 16px 24px 20px 27px;
 }
 
 .main-navigation a:hover {
@@ -133,7 +206,8 @@ body {
     display: grid;
     grid-template-columns: 300px 300px 300px;
     gap: 20px;
-    width: 940px;
+    padding: 0;
+    
 }
 
 .site-name {
@@ -147,11 +221,6 @@ body {
     color: var(--white);
     opacity: 30%;
 }
-
-/* .offers-list button {
-    color:var(--white);
-    opacity: 100%;
-}  */
 
 .offers-list {
     list-style: none;
@@ -183,6 +252,12 @@ body {
 .offers-item-slider {
     grid-column: 1/3;
     grid-row: 2/4;
+    background-image: url("../img/man_with_hammer.jpg");
+    
+}
+
+.offers-item-slider p {
+    text-transform: none;
 }
 
 .discounts {
