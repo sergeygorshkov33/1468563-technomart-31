@@ -16,11 +16,13 @@
     --success: #5FBB2D;
     --error: #BA2732;
     --chapter-hover: #CA2C37;
-    --special-yellow: #FFBF47;
-    --special-blue: #3bbce3;
-    --special-magenta: #DC91D8;
-    --special-green: #8ED78F;
+    --special-yellow: rgb(255, 191, 71);
+    --special-blue: rgb(59, 188, 227);
+    --special-magenta: rgb(220, 145, 216);
+    --special-green: rgb(142, 215, 143);
     --old-price: #A9A9A9;
+    --clarifier-button: rgb(255, 255, 255, 0.3);
+    --clarifier-a: rgb(255, 255, 255, 0.5);
 }
 /* Global */
 body {
@@ -106,7 +108,7 @@ body {
 
 .place-order:focus,
 .user-interface:focus {
-    opacity: 50%;
+    color: var(--clarifier-a);
 }
 
 
@@ -189,7 +191,7 @@ body {
 
 .main-navigation a:focus {
     background-color: var(--dark-gray);
-    opacity: 50%;
+    color: var(--clarifier-a);
 }
 .main-content {
     display: grid;
@@ -207,6 +209,7 @@ body {
     grid-template-columns: 300px 300px 300px;
     gap: 20px;
     padding: 0;
+    list-style: none;
     
 }
 
@@ -219,11 +222,9 @@ body {
     line-height: 18px;
     text-transform: uppercase;
     color: var(--white);
-    opacity: 30%;
-}
-
-.offers-list {
-    list-style: none;
+    width: 135px;
+    height: 38px;
+    background-color: var(--clarifier-button);
 }
 
 .offers-item {
@@ -463,7 +464,7 @@ body {
 }
 
 .social-button {
-    background: linear-gradient(0deg, #212A3A, #212A3A);
+    background-color: #212A3A;
     /* border: var(--basic-black) solid 1px ;
     border-radius: 50%; */
 }
