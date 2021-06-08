@@ -46,13 +46,13 @@ body {
 .container {
     width: 940px;
     margin: 0 auto;
-    outline: 5px solid rgba(0, 255, 255, 0.3);
+    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 /* Header */
 .user-panel {
     background-color: var(--dark-blue);
     text-transform: none;
-    outline: 5px solid rgba(0, 255, 255, 0.3);
+    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 /* .main-header {
@@ -66,7 +66,7 @@ body {
     display: grid;
     grid-template-columns: 130px 1fr 150px 150px 150px;
     height: 42px;
-    outline: 5px solid rgba(0, 255, 255, 0.3);
+    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .main-header-logo {
@@ -81,17 +81,17 @@ body {
 .user-navigation {
     /* grid-column: 2/3; */
     background-color: var(--dark-blue);
-    outline: 5px solid rgba(0, 255, 255, 0.3);
+    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .bookmark {
     grid-column: 3;
-    outline: 5px solid rgba(0, 255, 255, 0.3);
+    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .cart {
     grid-column: 4;
-    outline: 5px solid rgba(219, 241, 18, 0.3);
+    /* outline: 5px solid rgba(219, 241, 18, 0.3); */
 }
 
 .place-order {
@@ -99,7 +99,7 @@ body {
     color: var(--white);
     background-color: var(--basic-green);
 
-    outline: 5px solid rgba(28, 148, 92, 0.3);
+    /* outline: 5px solid rgba(28, 148, 92, 0.3); */
 }
 
 .place-order:hover {
@@ -115,7 +115,7 @@ body {
 .main-header-contacts {
     background-color: var(--basic-graylight);
     text-transform: none;
-    outline: 5px solid rgba(173, 29, 41, 0.3);
+    /* outline: 5px solid rgba(173, 29, 41, 0.3); */
 }
 
 .contacts {
@@ -178,7 +178,7 @@ body {
     height: 60px;
     background-color: var(--black-text);
     text-transform: none;
-    outline: 5px solid rgba(78, 20, 117, 0.3);
+    /* outline: 5px solid rgba(78, 20, 117, 0.3); */
 }
 
 .main-navigation a {
@@ -207,6 +207,7 @@ body {
 .offers-list {
     display: grid;
     grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 123px 123px 123px;
     gap: 20px;
     padding: 0;
     list-style: none;
@@ -254,7 +255,16 @@ body {
     grid-column: 1/3;
     grid-row: 2/4;
     background-image: url("../img/man_with_hammer.jpg");
-    
+    width: 620px;
+    height: 266px;
+}
+
+.slider-drill {
+    grid-column: 1/3;
+    grid-row: 2/4;
+    background-image: url("../img/man_with_drill.png");
+    width: 620px;
+    height: 266px;
 }
 
 .offers-item-slider p {
@@ -281,6 +291,9 @@ body {
 
 .main-products, 
 .main-manufacturers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--basic-beige);
 }
 
@@ -296,6 +309,9 @@ body {
     font-size: 17px;
     line-height: 18px;
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
 }
 
 .products-item {
@@ -322,8 +338,37 @@ body {
     background-repeat: no-repeat;
 }
 
+/* .main-manufacturers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
 .manufacturers-list {
     list-style: none;
+    margin: 0px;
+    padding: 0px;
+    /* display: grid; 
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: 145px 145px;
+    gap: 20; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.manufacturers-item {
+    width: 220px;
+    height: 145px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
+}
+
+.manufacturers-item:nth-child(4n) {
+    margin-right: 0px;
 }
 
 .main-services {
