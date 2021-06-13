@@ -227,6 +227,7 @@ body {
     width: 135px;
     height: 38px;
     background-color: var(--clarifier-button);
+    border: 0;
 }
 
 .offers-item {
@@ -255,18 +256,18 @@ body {
 .offers-item-slider {
     grid-column: 1/3;
     grid-row: 2/4;
-    background-image: url("../img/man_with_hammer.jpg");
+    /* background-image: url("../img/man_with_hammer.jpg"); */
     width: 620px;
     height: 266px;
 }
 
-.slider-drill {
+/* .slider-drill {
     grid-column: 1/3;
     grid-row: 2/4;
     background-image: url("../img/man_with_drill.png");
     width: 620px;
     height: 266px;
-}
+} */
 
 .offers-item-slider p {
     text-transform: none;
@@ -380,8 +381,35 @@ body {
     color: var(--basic-black);
 }
 
+.main-services .container {
+    display: grid;
+    grid-template-columns: 240px 80px 80px 540px;
+    grid-template-rows: 238px 284px;
+}
+
+.services-decription {
+    grid-column: 1/4;
+}
+
+.services-list {
+    margin: 0px;
+    padding: 0px;
+    grid-column: 1/2;
+    grid-row: 2;
+}
+
+.current-services-item {
+    grid-column: 3/5;
+    grid-row: 2;
+}
+
+.current-services-item p {
+    width: 300px;
+}
+
 .main-services h2, h3 {
     font-family: "Cuprum", Arial, sans-serif;
+    font-weight: 400;
     font-size: 30px;
     line-height: 30px;
 }
@@ -406,18 +434,18 @@ body {
     font-size: 21px;
     line-height: 30px;
     font-weight: 700;
-}
-
-.not-active-services-button {
+    width: 240px;
+    height: 61px;
+    border: 0px;
     background-color: var(--black-text);
     color: var(--white);
 }
 
-.not-active-services-button:hover {
+.services-button:hover {
     background-color: var(--dark-blue);
 }
 
-.active-services-button {
+.services-button:focus {
     background-color: var(--white);
     color: var(--black-text);
 }
