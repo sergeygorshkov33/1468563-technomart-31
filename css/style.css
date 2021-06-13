@@ -593,13 +593,13 @@ body {
     display: none;
 }
 
-.social-list li {
+/* .social-list li {
     width: 44;
     height: 44;
     background-color: var(--social-button);
     border: 1px solid var(--social-button);
     border-radius: 50%;
-}
+} */
 
 .social-button {
     background-color: var(--social-button);
