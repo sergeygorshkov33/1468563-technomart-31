@@ -34,7 +34,7 @@ body {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: var(--white);
+    color: var(--basic-black);
     text-transform: uppercase;
     background-color: var(--white);
 }
@@ -47,27 +47,18 @@ body {
 .container {
     width: 940px;
     margin: 0 auto;
-    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 /* Header */
 .user-panel {
     background-color: var(--dark-blue);
     text-transform: none;
-    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
-
-/* .main-header {
-    display: grid;
-    grid-template-rows: 42px, 1fr, 60px, 60px;
-    outline: 5px solid rgba(0, 255, 255, 0.3);
-} */
 
 .user-bar {
     grid-row: 1;
     display: grid;
     grid-template-columns: 130px 1fr 150px 150px 150px;
     height: 42px;
-    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .main-header-logo {
@@ -80,27 +71,22 @@ body {
 }
 
 .user-navigation {
-    /* grid-column: 2/3; */
     background-color: var(--dark-blue);
-    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .bookmark {
     grid-column: 3;
-    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .cart {
     grid-column: 4;
-    /* outline: 5px solid rgba(219, 241, 18, 0.3); */
 }
 
 .place-order {
     grid-column: 5;
     color: var(--white);
     background-color: var(--basic-green);
-
-    /* outline: 5px solid rgba(28, 148, 92, 0.3); */
+    border: 0px;
 }
 
 .place-order:hover {
@@ -114,16 +100,14 @@ body {
 
 
 .main-header-contacts {
-    background-color: var(--basic-graylight);
+    background-color: var(--basic-background);
     text-transform: none;
-    /* outline: 5px solid rgba(173, 29, 41, 0.3); */
+    padding-top: 41px;
 }
 
 .contacts {
     display: grid;
     grid-template-columns: 1fr 340px auto 150px;
-    
-    /* grid-template-rows: 158px 60px; */
 }
 
 .main-description {
@@ -137,8 +121,17 @@ body {
     text-align: center;
 }
 
+.contacts a {
+    color: var(--basic-black);
+    text-align: center;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+}
 .enter {
     grid-column: 3/4;
+    width: 121px;
+    height: 45px;
 }
 
 .registration {
@@ -179,7 +172,6 @@ body {
     height: 60px;
     background-color: var(--black-text);
     text-transform: none;
-    /* outline: 5px solid rgba(78, 20, 117, 0.3); */
 }
 
 .main-navigation a {
@@ -211,8 +203,7 @@ body {
     grid-template-rows: 123px 123px 123px;
     gap: 20px;
     padding: 0;
-    list-style: none;
-    
+    list-style: none; 
 }
 
 .site-name {
@@ -229,13 +220,14 @@ body {
     background-color: var(--clarifier-button);
     border: 0;
 }
-
+    
 .offers-item {
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
     text-transform: none;
+    color: var(--white);
 }
 
 .materials {
@@ -254,23 +246,56 @@ body {
 }
 
 .offers-item-slider {
+    font-family: "Cuprum", Arial, sans-serif;
     grid-column: 1/3;
     grid-row: 2/4;
-    /* background-image: url("../img/man_with_hammer.jpg"); */
     width: 620px;
     height: 266px;
+    display: grid;
+    grid-template-columns: auto 1fr 42px;
+    grid-template-rows: 52px 52px 71px 91px;
 }
 
-/* .slider-drill {
-    grid-column: 1/3;
-    grid-row: 2/4;
-    background-image: url("../img/man_with_drill.png");
-    width: 620px;
-    height: 266px;
-} */
+.offers-item-slider img {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    order: -1;
+}
+
+.offers-item-slider h3{
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--white);
+    padding-left: 25px;
+}
 
 .offers-item-slider p {
     text-transform: none;
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 25px;
+    color: var(--white);
+}
+
+.slider-button-back {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: 25px;
+}
+
+.slider-button-forward {
+    grid-column: 3;
+    grid-row: 3;
+    /* padding-left: 25px; */
+}
+
+.offers-item-slider .button {
+    grid-column: 1;
+    grid-row: 4;
+    margin: 27px 24px 27px 24px;
 }
 
 .discounts {
@@ -319,8 +344,6 @@ body {
     display: grid;
     grid-template-columns: 220px 220px 220px 220px;
     gap: 20px;
-    /* display: flex;
-    justify-content: space-around;*/
     margin: 0px;
     padding: 0px;
 }
@@ -333,7 +356,6 @@ body {
 }
 
 .products-item h3{
-    /* background-color: var(--white); */
     color: var(--basic-black);
     font-size: 18px;
     line-height: 20px;
@@ -369,7 +391,6 @@ body {
     margin-right: 20px;
     margin-bottom: 20px;
     margin-left: 0px;
-    /* outline: 5px solid rgba(0, 255, 255, 0.3); */
 }
 
 .manufacturers-item:nth-child(4n) {
@@ -450,6 +471,39 @@ body {
     color: var(--black-text);
 }
 
+/* Строим сетку раздела "О компании" */
+.about {
+    display: grid;
+    grid-auto-columns: 460px 1fr 300px;
+    /* grid-template-rows: 125px 80px 67px 116px 112px; */
+}
+
+.main-about {
+    grid-column: 1;
+}
+
+.about-contacts {
+    grid-column: 3;
+}
+
+.about-contacts p {
+    width: 180px;
+}
+
+.map-capture {
+    margin: 32px 0 25px 0;
+}
+
+.main-about .button {
+    width: 220px;
+    height: 38px;
+}
+
+.about-contacts .button {
+    width: 300px;
+    height: 38px;
+}
+
 .main-about, 
 .about-contacts {
     color: var(--basic-black);
@@ -464,8 +518,6 @@ body {
 .main-about ul {
     text-transform: none;
     font-family: "Cuprum", Arial, sans-serif;
-    /* font-size: 18px;
-    line-height: 24px; */
 }
 
 .main-about h2, 
@@ -479,6 +531,7 @@ body {
     text-transform: none;
     background-color: var(--black-text);
     margin: 0px;
+    margin-top: 74px;
     padding: 0px;
     font-size: 18px;
     font-family: "Cuprum", Arial, sans-serif;
@@ -540,10 +593,16 @@ body {
     display: none;
 }
 
+.social-list li {
+    width: 44;
+    height: 44;
+    background-color: var(--social-button);
+    border: 1px solid var(--social-button);
+    border-radius: 50%;
+}
+
 .social-button {
     background-color: var(--social-button);
-    /* border: var(--basic-black) solid 1px ;
-    border-radius: 50%; */
 }
 
 .footer-feedback a:focus {
@@ -576,7 +635,6 @@ body {
 .breadcrumbs a {
     font-size: 13px;
     line-height: 18px;
-    /* color: var(--basic-black); */
 }
 
 .catalog h1 {
@@ -592,7 +650,6 @@ body {
     background-color: var(--sorting-background);
     font-size: 13px;
     line-height: 18px;
-    /* color: var(--basic-black); */
 }
 
 .legend-name {
