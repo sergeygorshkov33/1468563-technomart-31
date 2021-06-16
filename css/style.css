@@ -366,10 +366,6 @@ body {
 .products-item {
     display: grid;
     grid-template-rows: 178px auto auto auto;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; */
     background-color: var(--white);
     text-align: center;
     height: 318px;
@@ -383,7 +379,6 @@ body {
     grid-row: 1/2;
     text-align: center;
     margin: auto;
-    /* display: block; */
 }
 .products-item h3 {
     grid-row: 2/3;
@@ -426,6 +421,7 @@ body {
 }
 
 .manufacturers-item {
+    display: flex;
     width: 220px;
     height: 145px;
     margin-right: 20px;
@@ -435,6 +431,11 @@ body {
 
 .manufacturers-item:nth-child(4n) {
     margin-right: 0px;
+}
+
+.manufacturers-item a {
+     margin:auto;
+   
 }
 
 .main-services {
@@ -515,7 +516,6 @@ body {
 .about {
     display: grid;
     grid-auto-columns: 460px 1fr 300px;
-    /* grid-template-rows: 125px 80px 67px 116px 112px; */
 }
 
 .main-about {
@@ -579,6 +579,12 @@ body {
     
 }
 
+.footer-contacts .container {
+    display: grid;
+    grid-template-columns: 343px 1fr;
+    grid-template-rows: 90px 103px;
+}
+
 .footer-address {
     font-style: normal;
 }
@@ -594,10 +600,57 @@ body {
 }
 
 .footer-logo {
+    grid-column: 1;
+    grid-row: 1;
     background-color: var(--basic-red);
     margin: 0px;
     padding: 0px;
 }
+
+.footer-navigation-list {
+    grid-column: 2/3;
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    margin: 0px;
+    /* align-items: right; */
+}
+
+.footer-navigation-item {
+    margin-top: 37px;
+    margin-right: 58px;
+}
+
+.footer-navigation-item:last-child {
+    margin-right: 0px;
+}
+
+.footer-navigation-item:first-child {
+    margin-left: 50px;
+}
+
+.footer-address {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.footer-offers-list {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* .footer-offers-item {
+    text-align: right;
+} */
+
+/* .footer-offers-item:last-child {
+    margin-right: auto;
+} */
 
 .footer-contacts p,
 .footer-contacts a {
