@@ -644,14 +644,6 @@ body {
     margin: 0px;
 }
 
-/* .footer-offers-item {
-    text-align: right;
-} */
-
-/* .footer-offers-item:last-child {
-    margin-right: auto;
-} */
-
 .footer-contacts p,
 .footer-contacts a {
     color: var(--basic-background);
@@ -680,6 +672,14 @@ body {
     list-style: none;
     font-size: 16px;
     line-height: 18px;
+    color: var(--white);
+}
+
+.footer-social .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-social h2 {
