@@ -18,7 +18,7 @@
           <div class="container user-bar">
             <a class="main-header-logo"><img src="img/logo-main.svg" width="107" height= alt="Логотип компании Техномарт"></a>
             <form class="user-navigation">
-              <input type="search" placeholder="Поиск:">
+              <input class="search-field" type="search" placeholder="Поиск:">
             </form>
             <a class="user-interface bookmark" href="#">Закладки: 0 </a>
             <a class="user-interface cart" href="#">Корзина: 0 </a>
@@ -63,21 +63,23 @@
                 <h3>Техника</h3>
                 <button class="button button-offers" type="button">Для стройки</button>
               </li>
-              <li class="slider-hammer visually-hidden">
-                <img src="img/man_with_hammer.jpg" width="620" height="266" alt="Изображение рабочего с перфоратором в руках">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-                <button class="slider-button-back" type="button">Назад</button>
-                <button class="slider-button-forward"type="button">Вперед</button>
-                <a class="button button-chapter" href="blank.html">Открыть каталог</a>
-              </li>
-              <li class="slider-drill">
-                <img src="img/man_with_drill.png" width="620" height="266" alt="Изображение рабочего с дрелью в руках">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-                <button class="slider-button-back" type="button">Назад</button>
-                <button class="slider-button-forward"type="button">Вперед</button>
-                <a class="button button-chapter" href="blank.html">Открыть каталог</a>
+              <li>
+                <article class="slider hammer">
+                  <img src="img/man_with_hammer.jpg" width="620" height="266" alt="Изображение рабочего с перфоратором в руках">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <button class="slider-button-back" type="button">Назад</button>
+                  <button class="slider-button-forward"type="button">Вперед</button>
+                  <a class="button button-chapter" href="blank.html">Открыть каталог</a>
+                </article>
+                <article class="slider drill visually-hidden">
+                  <img src="img/man_with_drill.png" width="620" height="266" alt="Изображение рабочего с дрелью в руках">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>                
+                  <button class="slider-button-back" type="button">Назад</button>
+                  <button class="slider-button-forward" type="button">Вперед</button>
+                  <a class="button button-chapter" href="blank.html">Открыть каталог</a>
+                </article>
               </li>
               <li class="offers-item discounts">
                 <h3>Скидки 50%</h3>
@@ -89,12 +91,11 @@
               </li>
             </ul>
           </section>
-       
           <section>
-            <article class="main-products">
+            <header class="main-products">
               <h2>Популярные товары:</h2>
               <a class="button button-chapter" href="blank.html">Все популярные товары</a>
-            </article>
+            </header>
             <ul class="main-products-list">
               <li class="products-item">
                 <h3>Перфоратор BOSCH BFG 9000</h3>
@@ -123,10 +124,10 @@
             </ul>
           </section>
           <section> 
-            <article class="main-manufacturers">
+            <header class="main-manufacturers">
               <h2>Популярные производители:</h2>
               <a class="button button-chapter" href="blank.html">Все производители</a>
-            </article>
+            </header>
             <ul class="manufacturers-list">
               <li class="manufacturers-item">
                 <a href="blank.html"><img src="img/logo-bosch.png" width="126" height="37" alt="Bosch"></a>
@@ -189,7 +190,7 @@
             <p class="shopping">Настоящий мужской шоппинг начинается здесь! 
               Огромный выбор товаров для ремонта и строительства не оставит 
               равнодушными любителей сэкономить на гастарбайтерах.</p>
-            <p class="deliveri">Мы можем доставить ваш товар в самые отдаленные точки России!
+            <p class="about-delivery">Мы можем доставить ваш товар в самые отдаленные точки России!
               Техномарт работает со многими транспортными компаниями:</p>
             <ul class="delivery-list">
               <li class="delivery-item">Деловые линии</li>

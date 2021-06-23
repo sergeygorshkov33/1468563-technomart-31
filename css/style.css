@@ -42,6 +42,19 @@ body {
     background-color: var(--white);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .page-body a {
     text-decoration: none;
     color: var(--white);
@@ -101,7 +114,8 @@ body {
     
 }
 
-.search-folder {
+.search-field {
+    padding-left: 17px;
     color: var(--white);
 }
 
@@ -123,6 +137,7 @@ body {
     color: var(--white);
     background-color: var(--basic-green);
     border: 0px;
+    border-radius: 0px;
 }
 
 .place-order:hover {
@@ -254,31 +269,7 @@ body {
     padding: 0;
     list-style: none; 
 }
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-
-.button-offers {
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: var(--white);
-    width: 135px;
-    height: 38px;
-    background-color: var(--clarifier-button);
-    border: 0;
-}
-    
+ 
 .offers-item {
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 24px;
@@ -286,6 +277,34 @@ body {
     line-height: 30px;
     text-transform: none;
     color: var(--white);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: 65px 1fr;
+    padding-left: 20px;
+}
+
+.offers-item h3 {
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-block;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.button-offers {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    width: 135px;
+    height: 38px;
+    background-color: var(--clarifier-button);
+    border: 0;
 }
 
 .materials {
@@ -305,8 +324,7 @@ body {
 
 /* СЛАЙДЕР */
 
-.slider-hammer, 
-.slider-drill {
+.slider {
     font-family: "Cuprum", Arial, sans-serif;
     grid-column: 1/3;
     grid-row: 2/4;
@@ -317,14 +335,12 @@ body {
     grid-template-rows: 52px 52px 71px 91px;
 }
 
-.slider-hammer img, 
-.slider-drill img {
+.slider img {
     grid-column: 1/-1;
     grid-row: 1/-1;
 }
 
-.slider-hammer h3, 
-.slider-drill h3 {
+.slider h3 {
     grid-column: 1;
     grid-row: 1;
     font-size: 36px;
@@ -334,8 +350,7 @@ body {
     padding-left: 25px;
 }
 
-.slider-hammer p, 
-.slider-drill p {
+.slider p {
     text-transform: none;
     grid-column: 1;
     grid-row: 2;
@@ -347,6 +362,10 @@ body {
     grid-column: 1;
     grid-row: 3;
     margin-left: 25px;
+    background-image: url(../img/icon-left.png);
+    width: 22px;
+    height: 40px;
+    background-repeat: no-repeat;
 }
 
 .slider-button-forward {
@@ -354,18 +373,21 @@ body {
     grid-row: 3;
 }
 
-.slider-hammer .button, 
-.slider-drill .button {
+.slider .button {
     grid-column: 1;
     grid-row: 4;
     margin: 27px 24px 27px 24px;
 }
 
 .discounts {
+    grid-column: 3;
+    grid-row: 2;
     background-color: var(--special-green);
 }
 
 .delivery {
+    grid-column: 3;
+    grid-row: 3;
     background-color: var(--special-yellow);
 }
 
@@ -520,11 +542,28 @@ body {
 .current-services-item {
     grid-column: 3/5;
     grid-row: 2;
+    /* display: grid;
+    grid-template-columns: 300px 1fr; */
 }
 
+.current-services-item h3 {
+    margin-top: 0px;
+    grid-column: 1;
+}
 .current-services-item p {
     width: 300px;
+    margin-top: 0px;
+    grid-column: 1;
 }
+
+/* .current-services-item p::after {
+    content: "";
+    background-image: url(../img/delivery-car.png);
+    width: 468px;
+    height: 261px;
+    margin-right: auto;
+    margin-bottom: auto;
+} */
 
 .main-services h2, h3 {
     font-family: "Cuprum", Arial, sans-serif;
@@ -620,6 +659,27 @@ body {
 .main-about h2, 
 .about-contacts h2{
     font-family: "Cuprum", Arial, sans-serif;
+}
+
+.delivery-list {
+    list-style: none;
+    padding: 0;
+}
+
+.delivery-item {
+    position: relative;
+    padding-left: 37px;
+}
+
+.delivery-item::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 25px;
+    background-color: var(--basic-red);
+    position: absolute;
+    top: 12px;
+    left: 0px;
 }
 
 /* footer */
