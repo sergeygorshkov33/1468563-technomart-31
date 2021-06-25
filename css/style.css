@@ -226,7 +226,9 @@ body {
 }
 
 .enter, .registration {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white);
     text-align: center;
     font-size: 21px;
@@ -247,7 +249,9 @@ body {
 }
 
 .main-address a {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--basic-red);
     font-size: 21px;
     line-height: 30px;
@@ -433,36 +437,35 @@ body {
 }
 
 .button-chapter {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--basic-red);
     font-family: "Cuprum", Arial, sans-serif;;
     font-size: 14px;
     line-height: 18px;
     height: 38px;
     width: 192px;
-    text-align: center;
-    vertical-align: middle;
+    /* text-align: center; */
 }
 
 .button-chapter:hover {
     background-color: var(--chapter-hover);
 }
 
-.main-products, 
-.main-manufacturers {
+.main-headers {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--basic-beige);
     margin-bottom: 20px;
+    padding: 0 14px 0 28px;
 }
 
-.main-products h2,
-.main-manufacturers h2 {
+.main-headers h2 {
     font-size: 30px;
     line-height: 30px;
     color: var(--black-text);
-    
 }
 
 .main-products-list {
@@ -473,7 +476,7 @@ body {
     display: grid;
     grid-template-columns: 220px 220px 220px 220px;
     gap: 20px;
-    margin: 0px;
+    margin: 0 0 70px 0;
     padding: 0px;
 }
 
@@ -513,7 +516,9 @@ body {
 }
 
 .new-price {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url("../img/new_price.png");
     width: 141px;
     height: 38px;
@@ -521,7 +526,7 @@ body {
     background-repeat: no-repeat;
     color: var(--white);
     margin: auto auto 21px auto;
-    padding: 10px auto 10px auto;
+    /* padding: 10px auto 10px auto; */
     border: none;
 }
 
@@ -561,12 +566,14 @@ body {
 .main-services {
     background-color: var(--basic-background);
     color: var(--basic-black);
+    margin: 0 0 70px 0;
 }
 
 .main-services .container {
     display: grid;
     grid-template-columns: 240px 80px 80px 540px;
     grid-template-rows: 238px 284px;
+    /* margin: 0px; */
 }
 
 .services-decription {
@@ -663,12 +670,19 @@ body {
     grid-column: 3;
 }
 
+.about h2 {
+    margin: 0 0 24px 0;
+}
+
 .about-contacts p {
+    margin: 0;
+    margin-bottom: 32px;
     width: 180px;
 }
 
 .map-capture {
-    margin: 32px 0 25px 0;
+    display: inline-block;
+    margin-bottom: 25px;
 }
 
 .main-about .button {
