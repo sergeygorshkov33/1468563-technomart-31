@@ -86,12 +86,7 @@ body {
     text-align: center; */
 }
 
-.main-header-logo
-/* .user-interface .cart,
-.bookmark,
-.enter,
-.registration */
-    {
+.main-header-logo {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -101,35 +96,79 @@ body {
     background-color: var(--error);
 }
 
-.user-navigation {
+/* .search {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     color: var(--white);
-}
+} */
 
-.user-navigation input{
+.search input{
     display: block;
-    width: 270px;
+    width: 228px;
     height: 42px;
     background-color: var(--dark-blue);
-    border: none;
-    
+    border: none; 
 }
 
-.search-field {
-    padding-left: 17px;
+/* .search-field {
     color: var(--white);
 }
 
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+}
 
+.search-icon path:focus {
+    fill: red;
+} */
 
 .bookmark {
     grid-column: 3;
     display: flex;
     justify-content: center;
     text-align: center;
+    position: relative;
+    top: 9px;
+}
+
+.bookmark::before {
+    content: "";
+    width: 14px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    background-image: url(../img/icon-bookmark.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 30%;
 }
 
 .cart {
     grid-column: 4;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 9px;
+}
+
+.cart::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 30%;
 }
 
 .place-order {
@@ -187,13 +226,15 @@ body {
 }
 
 .enter, .registration {
-    display: inline-block;
+    display: block;
     background-color: var(--white);
     text-align: center;
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-black);
     height: 45px;
+    position: relative;
+    /* padding: 20px; */
 
 }
 .enter {
