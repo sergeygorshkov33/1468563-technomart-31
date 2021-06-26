@@ -949,15 +949,26 @@ body {
 }
 
 .breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     list-style: none;
+    padding: 0;
+    margin: 21px 0 20px 0;
 }
 .breadcrumbs a {
     font-size: 13px;
     line-height: 18px;
     color: var(--basic-black);
+    margin-right: 40px;
 }
 
 .catalog h1 {
+    display: inline-block;
+    /* height: 89px; */
+    margin: 0 0 20px 0;
+    width: 911px;
+    padding: 29px 0 30px 29px;
     background-color: var(--basic-background);
     color: var(--black-text);
     font-size: 30px;
@@ -978,6 +989,32 @@ body {
     background-color: var(--sorting-background);
     font-size: 13px;
     line-height: 18px;
+    margin: 0px;
+    height: 38px;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 18px;
+}
+
+.sorting {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.filter li,
+.sorting li {
+    list-style: none;
+}
+
+
+.sorting li:first-child {
+    margin-right: 140px;
 }
 
 .legend-name {
@@ -987,9 +1024,15 @@ body {
     font-weight: 700;
 }
 
-.filter li,
-.sorting li {
-    list-style: none;
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.filter-list label {
+    margin-bottom: 20px;
 }
 
 .price label {
