@@ -24,6 +24,7 @@
     --old-price: #A9A9A9;
     --clarifier-button: rgb(255, 255, 255, 0.3);
     --clarifier-a: rgb(255, 255, 255, 0.5);
+    --pagin_border: #E5E5E5;
     --social-button: #212A3A;
     --card-border: #EAEAEA;
     --user-menu-a: rgba(0, 0, 0, 0.0001);
@@ -1057,7 +1058,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 0;
+    margin: 0 0 48px 0;
     padding: 0px;
 }
 
@@ -1098,11 +1099,54 @@ body {
 .pagination-list {
     list-style: none;
     grid-column: 1/4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 0 59px 0;
+}
+
+.pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 .pagination-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 38px;
+    margin: 0;
+    padding: 0;
     color: var(--basic-black);
+    border: 1px solid var(--pagin_border);
+    border-radius: 2px;
+    margin-right: 10px;
 }
+
+.current-page a{
+    color: var(--white);
+    background-color: var(--basic-red);
+    border: 1px solid var(--basic-red);
+}
+
+.catalog-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 140px;
+    margin: 0;
+    padding: 0;
+    color: var(--basic-black);
+    border: 1px solid var(--pagin_border);
+    border-radius: 2px;
+    /* margin-right: 10px; */
+}
+
 
 .about-products {
     background-color: var(--basic-background);
