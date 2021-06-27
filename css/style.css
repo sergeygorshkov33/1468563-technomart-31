@@ -82,9 +82,6 @@ body {
     grid-column: 1;
     background-color: var(--basic-red);
     box-shadow: 0px 5px 0px var(--error);
-    /* display: flex;
-    justify-content: center;
-    text-align: center; */
 }
 
 .main-header-logo {
@@ -237,7 +234,6 @@ body {
     color: var(--basic-black);
     height: 45px;
     position: relative;
-    /* padding: 20px; */
 
 }
 .enter {
@@ -447,7 +443,6 @@ body {
     line-height: 18px;
     height: 38px;
     width: 192px;
-    /* text-align: center; */
 }
 
 .button-chapter:hover {
@@ -527,7 +522,6 @@ body {
     background-repeat: no-repeat;
     color: var(--white);
     margin: auto auto 21px auto;
-    /* padding: 10px auto 10px auto; */
     border: none;
 }
 
@@ -558,8 +552,7 @@ body {
 }
 
 .manufacturers-item a {
-    margin:auto;
-   
+    margin:auto; 
 }
 
 /* Раздел с описанием Сервисов */
@@ -572,9 +565,8 @@ body {
 
 .main-services .container {
     display: grid;
-    grid-template-columns: 240px 80px 80px 540px;
+    grid-template-columns: 240px 80px 80px 72px 468px;
     grid-template-rows: 238px 284px;
-    /* margin: 0px; */
 }
 
 .services-decription {
@@ -591,8 +583,6 @@ body {
 .current-services-item {
     grid-column: 3/5;
     grid-row: 2;
-    /* display: grid;
-    grid-template-columns: 300px 1fr; */
 }
 
 .current-services-item h3 {
@@ -605,14 +595,17 @@ body {
     grid-column: 1;
 }
 
-/* .current-services-item p::after {
-    content: "";
+.current-services-capture {
+    grid-column: 5/6;
+    grid-row: 2;
     background-image: url(../img/delivery-car.png);
     width: 468px;
     height: 261px;
-    margin-right: auto;
-    margin-bottom: auto;
-} */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: auto;
+}
 
 .main-services h2, h3 {
     font-family: "Cuprum", Arial, sans-serif;
@@ -669,6 +662,9 @@ body {
 
 .about-contacts {
     grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .about h2 {
@@ -676,14 +672,16 @@ body {
 }
 
 .about-contacts p {
+    display: block;
     margin: 0;
     margin-bottom: 32px;
     width: 180px;
+    line-height: 24px;
 }
 
 .map-capture {
     display: inline-block;
-    margin-bottom: 25px;
+    margin: 32px 0 25px 0;
 }
 
 .main-about .button {
@@ -703,8 +701,21 @@ body {
 
 .main-about p, 
 .about-contacts p {
+    display: block;
+    margin: 0;
+    padding: 0;
     text-transform: none;
     font-size: 13px;
+}
+
+.company-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 460px;
+    height: 147px;
+    margin: 0;
+    padding: 0;
 }
 
 .main-about ul {
@@ -725,6 +736,12 @@ body {
 .delivery-item {
     position: relative;
     padding-left: 37px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.delivery-item:last-child {
+    margin-bottom: 20px;
 }
 
 .delivery-item::before {
@@ -936,13 +953,14 @@ body {
     margin-right: 0px;
 }
 
-/* .user-menu a:last-child::before {
+.user-menu a:last-child::before {
+    content: "";
     display: inline-block;
     height: 4px;
     width: 4px;
     border-radius: 50%;
     color: var(--black-text);
-} */
+} 
 
 
 .catalog {
@@ -966,7 +984,6 @@ body {
 
 .catalog h1 {
     display: inline-block;
-    /* height: 89px; */
     margin: 0 0 20px 0;
     width: 911px;
     padding: 29px 0 30px 29px;
