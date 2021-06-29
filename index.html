@@ -72,15 +72,15 @@
                 <button class="button button-offers" type="button">Для стройки</button>
               </li>
               <li>
-                <article class="slider hammer">
+                <article class="slider">
                   <img src="img/man_with_hammer.jpg" width="620" height="266" alt="Изображение рабочего с перфоратором в руках">
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
-                  <button class="slider-button-back" type="button">Назад</button>
-                  <button class="slider-button-forward"type="button">Вперед</button>
+                  <button class="slider-button-back" type="button"></button>
+                  <button class="slider-button-forward"type="button"></button>
                   <a class="button button-chapter" href="blank.html">Открыть каталог</a>
                 </article>
-                <article class="slider drill visually-hidden">
+                <article class="slider visually-hidden">
                   <img src="img/man_with_drill.png" width="620" height="266" alt="Изображение рабочего с дрелью в руках">
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>                
@@ -299,7 +299,7 @@
       </footer> 
       <section class="modal modal-feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <button class="modal-close visually-hidden" type="button">Закрыть</button>
+        
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="user-name">
             <label class="popup-labels">Ваше имя:</label>
@@ -313,7 +313,7 @@
           </div>
           <div class="user-text">
             <p>  
-              <label class="popup-labels">Текст письма</label>
+              <label class="popup-labels">Текст письма:</label>
               <input class="popup-user-text"type="text" name="Поле ввода текста" placeholder="В свободной форме">
             </p>
           </div>
@@ -321,10 +321,13 @@
         <article class="submit-field">
           <button class="button button-chapter" type="submit">Отправить</button>
         </article>
-      </section> 
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </section>
+       
       <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <button class="modal-close" type="button">Закрыть</button>
+        
       </section>
   </body>
 </html>
